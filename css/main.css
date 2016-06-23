@@ -1,0 +1,80 @@
+* {
+    /*border: 1px dashed red;
+ */
+}
+
+#banner {
+    height:100px;
+    width:100%;
+    background-color:black;
+    border-radius:5px;
+}
+
+#banner_logo {
+    float:left;
+    margin:30px 0px 0px 10px;
+    position:relative;
+}
+
+#banner_logo_link {
+    text-decoration:none;
+    color:lightblue;
+}
+
+#navbar {
+    float:right;
+    clear:left;
+    margin:5px 10px 0px 0px;
+    position:relative;
+}
+
+.navitem {
+    text-decoration:none;
+    color:lightblue;
+    padding:5px;
+    margin:0px;
+}
+
+.navitem:hover {
+    color:black;
+    background-color:lightblue;
+    border-radius:5px;
+    padding:5px 5px 15px 5px;
+}
+
+#project {
+    
+}
+
+#hobby {
+
+}
+
+#about {
+
+}
+
+p {
+    font-family:sans-serif;
+    font-size:1.1em;
+}
+
+h1 {
+    font-family:Arial;
+}
+
+ul {
+    padding:0px;
+    margin:0px;
+}
+
+li {
+    list-style-type:none;
+    display:inline;
+    font-family:serif;
+    margin:0px;
+}
+
+body {
+    background-color:lightblue;
+}
