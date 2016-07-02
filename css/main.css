@@ -66,11 +66,13 @@ p {
 
 h1 {
     font-family:Arial;
+    font-size:2em;
+    font-weight:bold;
 }
 
 ul {
     padding:0px;
-    margin:0px;
+    margin:8px;
 }
 
 li {
