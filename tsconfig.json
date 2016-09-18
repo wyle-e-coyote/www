@@ -1,10 +1,11 @@
 {
     "compilerOptions": {
         "module": "commonjs",
-        "outDir": "javascript/",
+        "outDir": "./javascript/",
         "removeComments": true
     },
     "files": [
+        "./typings/index.d.ts",
         "test.ts"
     ]
 }

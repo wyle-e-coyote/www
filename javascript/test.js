@@ -1,4 +1,4 @@
 (function () {
     'use strict';
-    var test = JQuery('#main');
+    var test = $('#main');
 });
