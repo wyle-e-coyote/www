@@ -1,0 +1,32 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "lawrencelane.net",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wyle-e-coyote/www.git"
+  },
+  "keywords": [
+    "www"
+  ],
+  "author": "Christopher Lawrence",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wyle-e-coyote/www/issues"
+  },
+  "homepage": "https://github.com/wyle-e-coyote/www#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.1.1",
+    "node": "0.0.0",
+    "react": "^15.3.2",
+    "ts-loader": "^0.9.5",
+    "typescript": "^2.0.6",
+    "uglify-js": "^2.7.4",
+    "webpack": "^1.13.3"
+  }
+}
