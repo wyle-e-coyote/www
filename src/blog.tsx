@@ -1,20 +1,21 @@
 /// <reference path="index.d.ts" />
 
-//let React = require('react');
-
-//import * as React from "react";
-
-//import React = __React;
-//import ReactDOM = React.__DOM;
-
 function BlogPost(props) {
     return (
         <div>
-            <h1>
+            <div className="title">
                 {props.post.title}
-            </h1>
-            <div id="post">
+            </div>
+            <div className="post">
                 {props.post.text}
+            </div>
+            <div className="post_footer">
+                <div className="author">
+                    {props.post.author}
+                </div>
+                <div className="created">
+                    {props.post.created}
+                </div>
             </div>
         </div>
     );
@@ -28,7 +29,7 @@ function BlogPostList(props) {
         return (<BlogPost key={post.id.toString()} post={post} />);
     });
     return (
-        <div className="blogList">
+        <div id="blogList">
             {postNodes}
         </div>
     );
@@ -52,7 +53,6 @@ class BlogPostBox extends React.Component<BlogPostBoxProps, BlogPostBoxState> {
     constructor(){
         super();
         this.state = new BlogPostBoxState()
-        //this.state.posts.push({text: "loading...", title: "loading..."});
     }
     loadCommentsFromServer() {
         $.ajax({
@@ -62,7 +62,14 @@ class BlogPostBox extends React.Component<BlogPostBoxProps, BlogPostBoxState> {
           success: function(data) {
               const texts = this.state.posts.splice();
               for (let i = 0; i<data.length; i++){
-                  texts.push({id: data[i].id, text: data[i].text, title: data[i].title});
+                  texts.push(
+                        {
+                            id: data[i].id, 
+                            text: data[i].text, 
+                            title: data[i].title,
+                            author: data[i].author,
+                            created: data[i].created
+                        });
               }
               this.setState({posts:texts});
           }.bind(this),
@@ -75,13 +82,11 @@ class BlogPostBox extends React.Component<BlogPostBoxProps, BlogPostBoxState> {
         this.loadCommentsFromServer();
     }
     renderBlogList(){
-        //return null;
         return <BlogPostList posts={this.state.posts} />;
     }
     render(){
         return (
-            <div className="blogbox">
-                <h1>Blogs</h1>
+            <div id="blogbox">
                 {this.renderBlogList()}
             </div>
         );
@@ -91,6 +96,6 @@ class BlogPostBox extends React.Component<BlogPostBoxProps, BlogPostBoxState> {
 document.addEventListener("DOMContentLoaded", function(){
     ReactDOM.render(
         <BlogPostBox />, 
-        document.getElementById("content")
+        document.getElementById("main")
     );
 })

@@ -3,7 +3,6 @@
         "module": "commonjs",
         "outDir": "./javascript/",
         "removeComments": true,
-        "noLib": false,
         "target": "es5",
         "jsx": "react"
     },

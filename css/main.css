@@ -1,13 +1,10 @@
-* {
-    /*border: 1px dashed red;
- */
-}
+/* * {
+    border: 1px dashed red;
+}*/
 
 #wrap {
     width:960px;
     margin:0px auto;
-    border-style: solid;
-    border-width: 1px;
     border-radius: 5px;
 }
 
@@ -15,7 +12,8 @@
     height:100px;
     width:100%;
     background-color:black;
-    border-radius:5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
 }
 
 #banner_logo {
@@ -34,6 +32,48 @@
     clear:left;
     margin:5px 10px 0px 0px;
     position:relative;
+}
+
+#main {
+    width: 956px;
+    height: 600px;
+    margin: 0px auto;
+    padding: 15px 0 15px 0;
+    border-style: solid;
+    border-width: 2px;
+}
+
+#footer {
+    clear: both;
+    background-color: black;
+    background-image: url('../images/keyboard.jpg');
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50%;
+    width:960px;
+    height:128px;   
+    color: lightblue;
+    margin: 0px auto;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+div#overlay{
+    width: 480px;
+    height: 128px;
+    background-color: black;
+    float: right;
+    opacity: 0.80;
+    border-radius:5px;
+}
+
+#footer p{
+    width: 40%;
+    float: left;
+}
+
+#copyright {
+    margin: 10px 0 0 10px;
 }
 
 .navitem {
@@ -87,44 +127,4 @@ li {
 
 body {
     background-color:lightblue;
-}
-
-#main {
-    width: 960px;
-    height: 600px;
-    margin: 0px auto;
-    padding: 5px 0 5px 0;
-    border-radius:5px;
-}
-
-#footer {
-    clear: both;
-    background-color: black;
-    background-image: url('../images/keyboard.jpg');
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 50%;
-    width:960px;
-    height:128px;   
-    color: lightblue;
-    margin: 0px auto;
-    border-radius:5px;
-}
-
-div#overlay{
-    width: 480px;
-    height: 128px;
-    background-color: black;
-    float: right;
-    opacity: 0.80;
-    border-radius:5px;
-}
-
-#footer p{
-    width: 40%;
-    float: left;
-}
-
-#copyright {
-    margin: 10px 0 0 10px;
 }

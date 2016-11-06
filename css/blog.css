@@ -1,0 +1,48 @@
+#blogbox {
+    margin:0px auto;
+    width: 600px;
+    /*border-style: solid;
+    border-width: 1px;*/
+    border-radius: 5px;
+}
+
+#blogList {
+    background-color: black;
+    border-radius: 5px;
+}
+
+.title {
+    font-size: 28px;
+    background-color: white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 2px;
+    padding: 5px;
+}
+
+.post {
+    font-size: 18px;
+    background-color: grey;
+    color: white;
+    padding: 5px;
+}
+
+.post_footer {
+    background-color: white;
+    padding-bottom: 5px;
+    margin-top: 2px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.author {
+    float: left;
+    background-color: white;
+    color: black;
+    margin-right: 20px;
+}
+
+.created {
+    background-color: white;
+    color: black;
+}
