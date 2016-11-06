@@ -7,42 +7,56 @@
 }
 
 #blogList {
-    background-color: black;
+    /*background-color: black;*/
     border-radius: 5px;
 }
 
-.title {
+.post {
+    margin: 10px 0 10px 0;
+}
+
+.post_title {
     font-size: 28px;
-    background-color: white;
+    /*background-color: white;*/
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     margin-bottom: 2px;
     padding: 5px;
 }
 
-.post {
+.post_text {
     font-size: 18px;
-    background-color: grey;
-    color: white;
+    /*background-color: grey;*/
+    border-left: solid 1px;
+    border-right: solid 1px;
+    color: black;
     padding: 5px;
 }
 
 .post_footer {
     background-color: white;
+    opacity: 0.20;
     padding-bottom: 5px;
     margin-top: 2px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
 
-.author {
+.post_author {
     float: left;
-    background-color: white;
+    /*background-color: white;*/
+    opacity: 1.0;
     color: black;
     margin-right: 20px;
 }
 
-.created {
-    background-color: white;
+.post_created {
+    /*background-color: white;*/
     color: black;
+    opacity: 1.0;
+}
+
+.post_email {
+    cursor: pointer;
+    opacity: 1.0;
 }

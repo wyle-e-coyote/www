@@ -1,19 +1,30 @@
 /// <reference path="index.d.ts" />
 
+function stringTOHTML(str: string) {
+    let split = str.split('\n');
+    return split.join('<br />');
+}
+
+function unrealEmail(email: string) {
+    return email.replace('@', '_AT_');
+}
+
 function BlogPost(props) {
+    const email = "mailto:" + unrealEmail(props.post.email);
+    const text = stringTOHTML(props.post.text);
     return (
-        <div>
-            <div className="title">
+        <div className="post">
+            <div className="post_title">
                 {props.post.title}
             </div>
-            <div className="post">
-                {props.post.text}
-            </div>
+            <div className="post_text" dangerouslySetInnerHTML={{__html: text}} />
             <div className="post_footer">
-                <div className="author">
+                <div className="post_author">
+                    <a className="post_email" href={email}>
                     {props.post.author}
+                    </a>
                 </div>
-                <div className="created">
+                <div className="post_created">
                     {props.post.created}
                 </div>
             </div>
@@ -68,6 +79,7 @@ class BlogPostBox extends React.Component<BlogPostBoxProps, BlogPostBoxState> {
                             text: data[i].text, 
                             title: data[i].title,
                             author: data[i].author,
+                            email: data[i].email,
                             created: data[i].created
                         });
               }
