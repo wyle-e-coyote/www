@@ -1,4 +1,21 @@
-/// <reference path="index.d.ts" />
+/// <reference path="../index.d.ts" />
+
+interface IPost {
+    id: string;
+    author: string;
+    email: string;
+    text: string;
+    title: string;
+    created: string;
+}
+
+interface IBlogPostProps {
+    post: IPost;
+}
+
+interface IBlogPostListProps {
+    posts: IPost[];
+}
 
 function stringTOHTML(str: string) {
     let split = str.split('\n');
@@ -9,7 +26,7 @@ function unrealEmail(email: string) {
     return email.replace('@', '_AT_');
 }
 
-function BlogPost(props) {
+function BlogPost(props: IBlogPostProps) {
     const email = "mailto:" + unrealEmail(props.post.email);
     const text = stringTOHTML(props.post.text);
     return (
@@ -32,7 +49,7 @@ function BlogPost(props) {
     );
 }
 
-function BlogPostList(props) {
+function BlogPostList(props: IBlogPostListProps) {
     if (!props.posts) {
         return null;
     }
@@ -54,9 +71,9 @@ interface state {
 
 interface BlogPostBoxProps { }
 class BlogPostBoxState {
-    posts: Array<state>;
+    posts: Array<IPost>;
     constructor(){
-        this.posts = new Array<state>();
+        this.posts = new Array<IPost>();
     }
 }
 
@@ -70,7 +87,7 @@ class BlogPostBox extends React.Component<BlogPostBoxProps, BlogPostBoxState> {
           url: "http://127.0.0.1:5000/",
           dataType: 'json',
           cache: false,
-          success: function(data) {
+          success: function(data: IPost[]) {
               const texts = this.state.posts.splice();
               for (let i = 0; i<data.length; i++){
                   texts.push(
@@ -85,7 +102,7 @@ class BlogPostBox extends React.Component<BlogPostBoxProps, BlogPostBoxState> {
               }
               this.setState({posts:texts});
           }.bind(this),
-          error: function(xhr, status, err) {   
+          error: function(xhr: JQueryXHR, status: string, err:string) {   
             console.error(status, err.toString());
           }.bind(this)
         });
