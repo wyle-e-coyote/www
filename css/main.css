@@ -46,7 +46,7 @@
 #footer {
     clear: both;
     background-color: black;
-    background-image: url('../images/keyboard.jpg');
+    background-image: url('/img/keyboard.jpg');
     background-repeat: no-repeat;
     background-position: right;
     background-size: 50%;

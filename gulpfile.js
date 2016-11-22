@@ -4,4 +4,4 @@ require("./tasks/gulp/server");
 require("./tasks/gulp/layout");
 require("./tasks/gulp/blog");
 
-gulp.task("default", ["server", "blog", "html"]);
+gulp.task("default", ["server", "blog", "layout"]);
